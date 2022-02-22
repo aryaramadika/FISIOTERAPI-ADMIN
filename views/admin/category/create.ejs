@@ -1,0 +1,111 @@
+<%- include ../../partials/header.ejs%>
+<%- include ../../partials/navbar.ejs%>
+<%- include ../../partials/sidebar.ejs%>
+
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Patient Data</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="/">Home</a></li>
+              <li class="breadcrumb-item "><a href="/category">Patient Data</a></li>
+              <li class="breadcrumb-item active">Add</li>
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div class="card card-primary">
+                <div class="card-header">
+                  <h3 class="card-title">Form Add</h3>
+                </div>
+                <!-- /.card-header -->
+                <!-- form start -->
+                <form action="/category/create" method="POST">
+                  <div class="card-body">
+                    <div class="form-group">
+                      <li class="form-line" data-type="control_fullname" id="id_25">
+                        <label class="form-label form-label-top form-label-auto" id="label_25" for="first_25"> Patient’s Name </label>
+                        <div id="cid_25" class="form-input-wide" data-layout="full">
+                          <div data-wrapper-react="true">
+                            <span class="form-sub-label-container" style="vertical-align:top" data-input-type="first">
+                              <input type="text" id="first_25" name="q25_patientsName[first]" class="form-textbox" data-defaultvalue="" autoComplete="section-input_25 given-name" size="10" value="" data-component="first" aria-labelledby="label_25 sublabel_25_first" />
+                              <label class="form-sub-label" for="first_25" id="sublabel_25_first" style="min-height:13px" aria-hidden="false"> First Name </label>
+                            </span>
+                            <span class="form-sub-label-container" style="vertical-align:top" data-input-type="last">
+                              <input type="text" id="last_25" name="q25_patientsName[last]" class="form-textbox" data-defaultvalue="" autoComplete="section-input_25 family-name" size="15" value="" data-component="last" aria-labelledby="label_25 sublabel_25_last" />
+                              <label class="form-sub-label" for="last_25" id="sublabel_25_last" style="min-height:13px" aria-hidden="false"> Last Name </label>
+                            </span>
+                          </div>
+                        </div>
+                      </li>
+                    </div>
+                    <div class="form-group">
+                      <label for="name">Age</label>
+                      <input type="number" name="age" class="form-control" id="exampleInputEmail1" placeholder="Enter Age" required>
+                    </div><div class="form-group">
+                      <label for="name">Address</label>
+                      <input type="name" name="address" class="form-control" id="exampleInputEmail1" placeholder="Enter Address" required>
+                    </div><div class="form-group">
+                      <label for="name">Religion</label>
+                      <input type="name" name="religion" class="form-control" id="exampleInputEmail1" placeholder="Enter Religion" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="name">Job</label>
+                      <input type="name" name="job" class="form-control" id="exampleInputEmail1" placeholder="Enter Job" required>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <a href="../voucher/create" class="btn btn-outline-primary">
+                        <i class="nav-icon fas fa-plus-circle"></i>
+                        Add Data</a>
+                  </div>
+                  <div class="card-body">
+                    <table id="example2" class="table table-bordered table-hover">
+                      <thead>
+                      <tr>
+                        <th>No.</th>
+                        <th>Nama Intervensi</th>
+                  
+                      </tr>
+                      </thead>
+                    </table>                
+                    
+                  
+                
+                  </div>
+                  <!-- /.card-body -->
+                  
+                  <div class="card-footer">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </div>
+                </form>
+              </div>
+            <!-- /.card -->
+
+
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container-fluid -->
+    </section>
+    
+    <!-- /.content -->
+  </div>
+
+<%- include ../../partials/footer.ejs%>
+<%- include ../../partials/js.ejs%>
